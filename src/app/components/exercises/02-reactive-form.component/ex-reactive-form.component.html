@@ -1,0 +1,23 @@
+<form>
+  <div>
+    <mat-form-field>
+      <mat-label>Value 1</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field>
+      <mat-label>Value 2</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </div>
+
+  <app-ex-reactive-form-inner></app-ex-reactive-form-inner>
+
+  <app-incrementor></app-incrementor>
+
+  <div>
+    <button mat-flat-button type="button" color="primary" (click)="sendData()">Send</button>
+  </div>
+</form>

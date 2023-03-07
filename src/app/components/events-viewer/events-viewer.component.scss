@@ -1,0 +1,45 @@
+:host {
+  display: block;
+  width: 370px;
+}
+
+.events-container {
+  overflow: auto;
+}
+
+.event {
+  font-size: 14px;
+  white-space: nowrap;
+
+  .time {
+    color: lightgray;
+    &::after {
+      content: ' -';
+    }
+  }
+
+  &.start {
+    color: violet;
+  }
+
+  &.next {
+    color: lightblue;
+  }
+
+  &.complete {
+    color: lightgreen;
+  }
+
+  &.error {
+    color: red;
+  }
+
+  &.cancelled {
+    color: magenta;
+  }
+
+  &.unsub {
+    color: yellow;
+  }
+}
+

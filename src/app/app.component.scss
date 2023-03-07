@@ -1,0 +1,29 @@
+$header-height: 48px;
+
+.header {
+  font-size: 20px;
+  font-weight: 500;
+  height: $header-height;
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+}
+
+.sidenav-container {
+  height: calc(100% - $header-height);
+}
+
+.content {
+  margin-inline: 20px;
+  margin-block-start: 10px;
+}
+
+hr {
+  margin-block-end: 1em;
+}
+
+.sidenav {
+  padding-inline: 20px;
+  padding-block-start: 10px;
+}

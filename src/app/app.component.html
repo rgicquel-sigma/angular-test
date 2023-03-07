@@ -1,0 +1,32 @@
+<mat-toolbar class="header" color="primary">
+  <span (click)="goTo('')" style="cursor: pointer;">Σ - Test Angular</span>
+  <button mat-button [matMenuTriggerFor]="menu">Pages</button>
+  <mat-menu #menu="matMenu">
+    <button *ngFor="let route of ROUTES" mat-menu-item (click)="goTo(route.path!)">{{ route.data!['title'] }}</button>
+  </mat-menu>
+  <span class="spacer"></span>
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container" autosize>
+  <mat-sidenav #sidenav class="sidenav" position="end" mode="side" opened>
+    <app-obs-events-viewer></app-obs-events-viewer>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content" *appVar="{ routeTitle: routeTitle$ | async, routeDescription: routeDescription$ | async } as data">
+      <ng-container *ngIf="data.routeTitle || data.reouteDescription">
+        <div>
+          <h1>{{ data.routeTitle }}</h1>
+          <p>{{ data.routeDescription }}</p>
+        </div>
+        <hr />
+      </ng-container>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
