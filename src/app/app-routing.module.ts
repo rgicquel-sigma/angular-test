@@ -26,7 +26,7 @@ export const ROUTES: Routes = [
     description: null
   }},
   { path: `ex-${++index}`, component: ExPromisesComponent, data: {
-    title: `Ex. ${index}: OnPush`,
+    title: `Ex. ${index}: Promises and observables`,
     description: null
   }},
   { path: `ex-${++index}`, component: ExRxjs2Component, data: {

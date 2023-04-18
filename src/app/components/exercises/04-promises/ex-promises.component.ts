@@ -9,8 +9,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class ExPromisesComponent {
 
-  public user: string | null = null;
-
   public constructor() { }
 
   public start(): void {
